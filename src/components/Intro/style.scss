@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.intro {
+  background-size: cover;
+
+  padding: 4rem 6rem;
+  min-height: 100vh;
+
+  font-family: 'Bebas Neue', cursive;
+}
+
+.intro__header {
+  margin-bottom: 7rem;
+  display: flex;
+  justify-content: flex-end;
+
+  font-size: 3rem;
+}
+
+.intro__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro__name {
+  font-family: 'Big Shoulders Inline Display', cursive;
+  font-size: 8rem;
+}
+
+.intro__prof {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
+
+//// header
+.header__link {
+  text-decoration: none;
+
+  &:not(&:last-child) {
+    margin-right: 2rem;
+  }
+}
+
+//// networks
+.networks {
+  display: flex;
+  flex-direction: column;
+}
+
+.networks__link {
+  width: 4rem;
+
+  &:not(&:last-child) {
+    margin-bottom: 2rem;
+  }
+}
