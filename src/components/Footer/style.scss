@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Display:wght@700&display=swap');
+
+.footer {
+  padding: 3rem 0;
+  background: #000;
+  color: #fff;
+}
+
+.footer__networks {
+  margin-bottom: 1rem;
+
+  display: flex;
+  justify-content: center;
+}
+
+.footer__link {
+  font-size: 2rem;
+  text-decoration: none;
+
+  &:not(&:last-child) {
+    margin-right: 2rem;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.footer__contact {
+  font-family: 'Big Shoulders Inline Display', cursive;
+  text-align: center;
+  font-size: 1.5rem;
+}
