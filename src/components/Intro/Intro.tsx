@@ -9,11 +9,22 @@ type introProps = {
 };
 
 export default function Intro({openModal} : introProps) {
+    const scrollToWorks = (e: React.MouseEvent) => {
+        e.preventDefault();
+        const works = document.documentElement.querySelector('.works');
+        if (works !== null) {
+            works.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
     return (
         <div className='intro'>
             <Container>
                 <div className='intro__header header'>
-                    <a href='#' className='header__link'>Works</a>
+                    <a href='#' className='header__link' onClick={(e) => scrollToWorks(e)}>Works</a>
                     <a href='#' className='header__link' onClick={(e) => openModal(e)}>Contacts</a>
                 </div>
 
