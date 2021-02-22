@@ -1,22 +1,27 @@
 import React from 'react'
-import Btn from '../Common/Btn';
 import Container from '../Common/Container';
-import './style.scss'
 
-export default function Intro() {
+import './Intro.scss'
+import '../Common/Btn/style.scss';
+
+type introProps = {
+    openModal: (e: React.MouseEvent) => void
+};
+
+export default function Intro({openModal} : introProps) {
     return (
         <div className='intro'>
             <Container>
                 <div className='intro__header header'>
                     <a href='#' className='header__link'>Works</a>
-                    <a href='#' className='header__link'>Contacts</a>
+                    <a href='#' className='header__link' onClick={(e) => openModal(e)}>Contacts</a>
                 </div>
 
                 <div className='intro__content'>
                     <div className='intro__info'>
                         <h1 className='intro__name'>Lukina Valeria</h1>
                         <h3 className='intro__prof'>Frontend Developer ;)</h3>
-                        <Btn href='#' text='About Me'/>
+                        <a href='#' className='btn' onClick={(e) => openModal(e)}>About Me</a>
                     </div>
                     <div className='intro__networks networks'>
                         <a href='https://github.com/LukinaVA' target='_blank' className='networks__link'>

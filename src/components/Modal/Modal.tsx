@@ -1,9 +1,21 @@
 import React from 'react'
-import './style.scss'
+import './Modal.scss'
 
-export default function Modal() {
+type ModalProps = {
+    isOpen: boolean,
+    closeModal: (e: React.MouseEvent) => void
+};
+
+export default function Modal({isOpen, closeModal} : ModalProps) {
+    const handleOutsideClick = (e: React.MouseEvent) => {
+        const modalBg = document.documentElement.querySelector('.modal');
+        if (e.target === modalBg) {
+            closeModal(e);
+        }
+    }
+
     return (
-        <div className='modal'>
+        <div className='modal' hidden={!isOpen} onClick={(e) => handleOutsideClick(e)}>
             <div className='modal__content'>
                 <div className='modal__part modal__part_left'>
                     <h4 className='modal__title'>About Me</h4>
@@ -13,6 +25,7 @@ export default function Modal() {
                     </div>
                 </div>
                 <div className='modal__part modal__part_right'>
+                    <a href='#' className='modal__btn' onClick={(e)=>closeModal(e)}>Close</a>
                     <h4 className='modal__title'>Let`s talk ;)</h4>
                     <h5 className='modal__subtitle'>You can also write to me in a Telegram: <span>@LukinaVA</span></h5>
                     <form action='mailto:lukina-valeriya@mail.ru' className='modal__form contact-form'>

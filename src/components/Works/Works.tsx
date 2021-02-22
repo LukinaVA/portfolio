@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from '../Common/Container';
-import './style.scss'
+import './Works.scss'
 // import MoGo from './Mogo.jpg'
 // import MNTN from './MNTN.jpg'
 
