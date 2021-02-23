@@ -31,7 +31,7 @@ export default function Intro({openModal} : introProps) {
                 <div className='intro__content'>
                     <div className='intro__info'>
                         <h1 className='intro__name'>Lukina Valeria</h1>
-                        <h3 className='intro__prof'>Frontend Developer ;)</h3>
+                        <h3 className='intro__prof'>Junior Frontend Developer ;)</h3>
                         <a href='#' className='btn' onClick={(e) => openModal(e)}>About Me</a>
                     </div>
                     <div className='intro__networks networks'>

@@ -2,7 +2,16 @@ import React, {useState} from 'react'
 import {useSpring, animated as a} from "react-spring";
 import './Card.scss'
 
-export default function Card() {
+type cardProps = {
+    title: string,
+    subtitle: string,
+    description: string[],
+    code: string,
+    site: string,
+    bgImg: any
+};
+
+export default function Card({title, subtitle, description, code, site, bgImg} : cardProps) {
     const [flipped, set] = useState(false);
     const {transform, opacity} = useSpring({
        opacity: flipped ? 1 : 0,
@@ -13,30 +22,42 @@ export default function Card() {
     const interpolatorFun = (o: number) => 1 - o;
 
     const handleClick = (e: React.MouseEvent) => {
+        const cardBack = e.currentTarget.querySelector('.card__back') as HTMLElement;
         const codeLinks = Array.from(document.documentElement.querySelectorAll('.card__link'));
-        if (!codeLinks.includes(e.currentTarget)) {
+        const targetElement = e.target as HTMLElement;
+        if (!codeLinks.includes(targetElement)) {
             set(state => !state);
+        } else {
+            if (+cardBack.style.opacity < 1) {
+                e.preventDefault();
+                set(state => !state);
+            }
         }
+    };
+
+    const cardStyle = {
+        opacity: opacity.interpolate(o => interpolatorFun(Number(o))),
+        transform,
+        background: `url(${bgImg}) center`,
+        backgroundSize: 'cover'
     };
 
     return(
         <div className='card' onClick={(e) => handleClick(e)}>
-            <a.div className='card__front' style={{opacity: opacity.interpolate(o => interpolatorFun(Number(o))), transform}}>
-                <div className='card__content'>
-                    Click for more information
-                </div>
-            </a.div>
+            <a.div className='card__front' style={cardStyle}/>
             <a.div className='card__back' style={{opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`)}}>
                 <div className='card__content'>
-                    <h4 className='card__title'>MoGo</h4>
+                    <h4 className='card__title'>{title}</h4>
+                    <h5 className='card__subtitle'>{subtitle}</h5>
                     <ul className='card__description'>
-                        <li>HTML5 / CSS3</li>
-                        <li>SCSS</li>
-                        <li>Adaptive layout</li>
-                        <li>JavaScript</li>
+                        {description.map(item => (
+                            <li key={item}>{item}</li>
+                        ))}
                     </ul>
-                    <a href='https://github.com/LukinaVA/MoGo' className='card__link' target='_blank' rel='noreferrer'>Code</a>
-                    <a href='https://lukina.me/MoGo/' className='card__link' target='_blank' rel='noreferrer'>Site</a>
+                    <div className='card__links'>
+                        <a href={code} className='card__link' target='_blank' rel='noreferrer'>Code</a>
+                        <a href={site} className='card__link' target='_blank' rel='noreferrer'>Site</a>
+                    </div>
                 </div>
             </a.div>
         </div>
