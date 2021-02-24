@@ -19,9 +19,11 @@ export default function Modal({isOpen, closeModal} : ModalProps) {
             <div className='modal__content'>
                 <div className='modal__part modal__part_left'>
                     <h4 className='modal__title'>About Me</h4>
-                    <h5 className='modal__subtitle'>Frontend developer</h5>
+                    <h5 className='modal__subtitle'>Junior Frontend developer</h5>
                     <div className='modal__info'>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus corporis deserunt ex, ipsum labore, libero maiores non possimus praesentium provident quia tenetur ut vero. Earum labore maiores nisi perferendis quia?
+                        Hello! My name is Lera and I`m Junior Frontend Developer. For the present I`m completing
+                        my third year of Software Engineering at Peter the Great St. Petersburg Polytechnic University.
+                        I`m interested in developing various interfaces and always open to new projects!
                     </div>
                 </div>
                 <div className='modal__part modal__part_right'>
