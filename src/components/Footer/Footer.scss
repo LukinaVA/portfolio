@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Display:wght@700&display=swap');
-
 .footer {
   padding: 3rem 0;
   background: #000;
@@ -27,7 +25,10 @@
 }
 
 .footer__contact {
-  font-family: 'Big Shoulders Inline Display', cursive;
   text-align: center;
   font-size: 1.5rem;
+
+  span {
+    color: #e0b0ff;
+  }
 }

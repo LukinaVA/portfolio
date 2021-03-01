@@ -1,10 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
 .intro {
-  background-size: cover;
+  background: url("./me.png") 77% 50% / 30% auto no-repeat,
+              url("./bg.jpg") no-repeat center;
+  background-size: 30%, cover;
+  transition: all .1s ease 0s;
 
   padding: 4rem 6rem;
   min-height: 100vh;
+
+  color: #be8cd9;
 }
 
 .intro__header {
@@ -21,13 +26,14 @@
 }
 
 .intro__name {
-  font-family: 'Big Shoulders Inline Display', cursive;
-  font-size: 8rem;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 7rem;
 }
 
 .intro__prof {
   margin-bottom: 3rem;
   font-size: 2rem;
+  color: #fff;
 }
 
 //// header
@@ -60,53 +66,4 @@
   &:hover {
     transform: scale(1.15);
   }
-}
-
-.card1,
-.card2,
-.card3,
-.card4 {
-  position: absolute;
-  border-radius: 5px;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  will-change: transform;
-}
-
-.card1 {
-  min-width: 60ch;
-  min-height: 60ch;
-  width: 45vw;
-  height: 45vw;
-  max-width: 100ch;
-  max-height: 100ch;
-  background-image: url(https://image.flaticon.com/icons/svg/119/119596.svg);
-}
-
-.card2 {
-  width: 25ch;
-  height: 25ch;
-  background-image: url(https://image.flaticon.com/icons/svg/789/789395.svg);
-}
-
-.card3 {
-  opacity: 0.9;
-  width: 25ch;
-  height: 25ch;
-  background-image: url(https://image.flaticon.com/icons/svg/414/414927.svg);
-}
-
-.card4 {
-  width: 25ch;
-  height: 25ch;
-  background-image: url(https://image.flaticon.com/icons/svg/789/789392.svg);
-}
-
-.wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

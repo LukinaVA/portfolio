@@ -11,7 +11,7 @@ export default function Footer() {
                     <a href='https://vk.com/lukinaaaaaaa' className='footer__link'>VK</a>
                     <a href='https://www.instagram.com/lukinaaa_a/' className='footer__link'>Instagram</a>
                 </div>
-                <div className='footer__contact'>Telegram: @LukinaVA</div>
+                <div className='footer__contact'>Telegram: <span>@LukinaVA</span></div>
             </Container>
         </footer>
     );
