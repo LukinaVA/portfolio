@@ -6,4 +6,9 @@
 
   background: #be8cd9;
   border-radius: .5rem;
+
+  transition: all .3s linear 0s;
+  &:hover {
+    color: #000;
+  }
 }
