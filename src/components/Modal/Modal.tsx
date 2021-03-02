@@ -27,8 +27,8 @@ export default function Modal({isOpen, closeModal} : ModalProps) {
                     </div>
                 </div>
                 <div className='modal__part modal__part_right'>
-                    <a href='#' className='modal__btn' onClick={(e)=>closeModal(e)}>Close</a>
-                    <h4 className='modal__title'>Let`s talk ;)</h4>
+                    <a href='#' className='modal__btn' onClick={(e)=>closeModal(e)}/>
+                    <h4 className='modal__title'>Let `s talk ;)</h4>
                     <h5 className='modal__subtitle'>You can also write to me in a Telegram: <span>@LukinaVA</span></h5>
                     <form action='mailto:lukina-valeriya@mail.ru' className='modal__form contact-form'>
                         <label>

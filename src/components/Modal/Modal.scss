@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
 .modal {
   z-index: 50;
   position: fixed;
@@ -7,6 +9,38 @@
   left: 0;
 
   background: rgba(0, 0, 0, 0.5);
+}
+
+.modal__btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 2rem;
+  height: 2rem;
+  opacity: .3;
+  transition: all .1s linear 0s;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    left: 1rem;
+    content: '';
+    height: 2rem;
+    width: .13rem;
+    background: #be8cd9;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
 }
 
 .modal__content {
@@ -19,9 +53,6 @@
 
   width: 54rem;
   max-width: 100%;
-
-
-  background: #fff;
 }
 
 .modal__part {
@@ -29,7 +60,7 @@
   padding: 3rem;
 
   &_left {
-
+    background: #fff;
   }
 
   &_right {
@@ -39,7 +70,11 @@
 }
 
 .modal__title {
-  font-size: 2.5rem;
+  margin-bottom: .5rem;
+
+  font-family: 'Kaushan Script', cursive;
+  font-size: 3rem;
+  color: #be8cd9;
 }
 
 .modal__subtitle {
@@ -47,21 +82,57 @@
 
   font-style: italic;
   font-weight: 400;
-  font-size: .9rem;
+  font-size: 1.4rem;
+  line-height: 1.4em;
+  letter-spacing: .1rem;
 
   span {
-    color: #e0b0ff;
+    font-style: normal;
+    color: #be8cd9;
   }
+}
+
+.modal__info {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.4em;
 }
 
 //// contact-form
 .contact-form {
   display: flex;
   flex-direction: column;
+
+  label {
+    font-size: 1.4rem;
+    letter-spacing: .1rem;
+  }
 }
 
 .contact-form__field {
-  margin-bottom: 1rem;
+  margin: .5rem 0 1rem;
+  padding: .5rem;
   flex: 1;
   width: 100%;
+
+  background: #e0b0ff;
+  border-radius: 1rem;
+}
+
+.contact-form__btn {
+  align-self: center;
+  max-width: 12rem;
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  background: #be8cd9;
+  color: #fff;
+
+  transition: all .3s linear 0s;
+  &:hover {
+    color: #000;
+  }
 }
