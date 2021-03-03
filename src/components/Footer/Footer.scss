@@ -15,20 +15,35 @@
   font-size: 2rem;
   text-decoration: none;
 
+  transition: color .3s linear;
+
   &:not(&:last-child) {
     margin-right: 2rem;
   }
 
+  &:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: all .3s linear;
+  }
+
   &:hover {
-    text-decoration: underline;
+    color: #be8cd9;
+    &:after {
+      width: 100%;
+      background-color: #be8cd9;
+    }
   }
 }
 
 .footer__contact {
   text-align: center;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
 
   span {
-    color: #e0b0ff;
+    color: #be8cd9;
   }
 }

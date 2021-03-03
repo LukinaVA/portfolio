@@ -4,8 +4,7 @@
   background: url("./me.png") 77% 50% / 30% auto no-repeat,
               url("./bg.jpg") no-repeat center;
   background-size: 30%, cover;
-  transition: all .1s ease 0s;
-
+  //transition: all .1s ease 0s;
   padding: 4rem 6rem;
   min-height: 100vh;
 
@@ -45,8 +44,19 @@
     margin-right: 2rem;
   }
 
+  &:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #be8cd9;
+    transition: width .3s linear;
+  }
+
   &:hover {
-    text-decoration: underline;
+    &:after {
+      width: 100%;
+    }
   }
 }
 

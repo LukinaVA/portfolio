@@ -1,3 +1,16 @@
+@keyframes animate {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: .5;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+
 .btn {
   padding: 1rem 3rem;
   font-size: 2rem;
@@ -7,8 +20,18 @@
   background: #be8cd9;
   border-radius: .5rem;
 
+  overflow: hidden;
   transition: all .3s linear 0s;
   &:hover {
     color: #000;
+  }
+
+  span {
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate 1s linear infinite;
   }
 }

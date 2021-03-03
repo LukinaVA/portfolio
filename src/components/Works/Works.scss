@@ -7,7 +7,6 @@
 
 .works__title {
   margin-bottom: .5rem;
-
 }
 
 .works__title,
@@ -18,14 +17,28 @@
   font-size: 3rem;
 }
 
+@-webkit-keyframes blink {
+  0% {color: rgba(190, 140, 217, 1)}
+  50% {color: rgba(190, 140, 217, 0)}
+  100% {color: rgba(190, 140, 217, 1)}
+}
+
+@keyframes blink {
+  0% {color: rgba(190, 140, 217, 1)}
+  50% {color: rgba(190, 140, 217, 0)}
+  100% {color: rgba(190, 140, 217, 1)}
+}
+
 .works__subtitle {
   margin-bottom: 3rem;
-  color: #e0b0ff;
   text-align: center;
   font-size: 1.4rem;
   font-weight: 400;
   font-style: italic;
   letter-spacing: .09rem;
+
+  animation: blink 1.5s linear infinite;
+  -webkit-animation: blink 1.5s linear infinite;
 }
 
 .works__content {

@@ -84,11 +84,22 @@
   padding: .7rem 2rem;
   border-radius: 1rem;
 
-  &:hover {
-    text-decoration: underline;
-  }
-
   &:not(&:last-child) {
     margin-right: 2rem;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s linear;
+  }
+
+  &:hover {
+    &:after {
+      width: 100%;
+    }
   }
 }
