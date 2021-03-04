@@ -31,6 +31,18 @@ html {
   letter-spacing: .1rem;
   background: $black;
   color: $white;
+
+  @media #{$laptop} {
+    font-size: 15px;
+  }
+
+  @media #{$tablet} {
+    font-size: 12px;
+  }
+
+  @media #{$tablet-sm} {
+    font-size: 11px;
+  }
 }
 
 input,

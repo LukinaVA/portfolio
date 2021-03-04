@@ -9,6 +9,10 @@
   bottom: 0;
   left: 0;
 
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 2rem 0;
+
   background: rgba(0, 0, 0, 0.5);
 }
 
@@ -52,8 +56,13 @@
   top: 50%;
   transform: translate(-50%, -50%);
 
-  width: 54rem;
-  max-width: 100%;
+  width: 100%;
+  max-width: 54rem;
+
+  @media #{$mobile} {
+    flex-direction: column;
+    width: 90%;
+  }
 }
 
 .modal__part {
