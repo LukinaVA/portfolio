@@ -1,3 +1,5 @@
+@import "../../../vars";
+
 .card {
   position: relative;
   max-width: 60rem;
@@ -23,16 +25,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: #e0b0ff;
-    color: #000;
-  }
-
-  &__front {
-    color: #000;
-
-    .card__title {
-      font-size: 8rem;
-    }
+    background: $lavender;
+    color: $black;
   }
 }
 
@@ -78,8 +72,8 @@
   text-decoration: none;
   font-size: 1.8rem;
   letter-spacing: .1rem;
-  color: #fff;
-  background: #000;
+  color: $white;
+  background: black;
 
   padding: .7rem 2rem;
   border-radius: 1rem;
@@ -93,7 +87,7 @@
     display: block;
     width: 0;
     height: 2px;
-    background: #fff;
+    background: $white;
     transition: width .3s linear;
   }
 

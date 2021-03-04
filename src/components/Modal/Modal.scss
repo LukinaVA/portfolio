@@ -1,3 +1,4 @@
+@import "../../vars";
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
 .modal {
@@ -31,7 +32,7 @@
     content: '';
     height: 2rem;
     width: .13rem;
-    background: #be8cd9;
+    background: $lavender;
   }
 
   &:before {
@@ -60,12 +61,12 @@
   padding: 3rem;
 
   &_left {
-    background: #fff;
+    background: $white;
+    color: $black;
   }
 
   &_right {
-    background: #000;
-    color: #fff;
+    background: $black;
   }
 }
 
@@ -74,7 +75,7 @@
 
   font-family: 'Kaushan Script', cursive;
   font-size: 3rem;
-  color: #be8cd9;
+  color: $lavender;
 }
 
 .modal__subtitle {
@@ -88,7 +89,7 @@
 
   span {
     font-style: normal;
-    color: #be8cd9;
+    color: $lavender;
   }
 }
 
@@ -96,7 +97,6 @@
   font-size: 1.3rem;
   font-weight: 400;
   line-height: 1.4em;
-
 }
 
 //// contact-form
@@ -116,7 +116,7 @@
   flex: 1;
   width: 100%;
 
-  background: #e0b0ff;
+  background: $lavender-lite;
   border-radius: 1rem;
 }
 
@@ -129,11 +129,11 @@
   letter-spacing: .1rem;
   border-radius: 1rem;
   cursor: pointer;
-  background: #be8cd9;
-  color: #fff;
+  background: $lavender;
+  color: $white;
 
   transition: all .3s linear 0s;
   &:hover {
-    color: #000;
+    color: $black;
   }
 }

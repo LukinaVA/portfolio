@@ -1,7 +1,7 @@
+@import "../../vars";
+
 .footer {
   padding: 3rem 0;
-  background: #000;
-  color: #fff;
 }
 
 .footer__networks {
@@ -26,15 +26,15 @@
     display: block;
     width: 0;
     height: 2px;
-    background-color: #fff;
+    background-color: $white;
     transition: all .3s linear;
   }
 
   &:hover {
-    color: #be8cd9;
+    color: $lavender;
     &:after {
       width: 100%;
-      background-color: #be8cd9;
+      background-color: $lavender;
     }
   }
 }
@@ -44,6 +44,6 @@
   font-size: 1.6rem;
 
   span {
-    color: #be8cd9;
+    color: $lavender;
   }
 }

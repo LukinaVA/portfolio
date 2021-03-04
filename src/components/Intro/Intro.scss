@@ -1,18 +1,21 @@
+@import "../../vars";
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
 .intro {
   background: url("./me.png") 77% 50% / 30% auto no-repeat,
               url("./bg.jpg") no-repeat center;
   background-size: 30%, cover;
-  //transition: all .1s ease 0s;
+
+  display: flex;
+  flex-direction: column;
+
   padding: 4rem 6rem;
   min-height: 100vh;
 
-  color: #be8cd9;
+  color: $lavender;
 }
 
 .intro__header {
-  margin-bottom: 7rem;
   display: flex;
   justify-content: flex-end;
 
@@ -20,8 +23,10 @@
 }
 
 .intro__content {
+  flex: 1;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .intro__name {
@@ -33,7 +38,7 @@
   margin-bottom: 3rem;
   font-size: 2rem;
   letter-spacing: .1rem;
-  color: #fff;
+  color: $white;
 }
 
 //// header
@@ -49,7 +54,7 @@
     display: block;
     width: 0;
     height: 2px;
-    background: #be8cd9;
+    background: $lavender;
     transition: width .3s linear;
   }
 
@@ -67,7 +72,7 @@
 }
 
 .networks__link {
-  width: 4rem;
+  width: 4.5rem;
 
   &:not(&:last-child) {
     margin-bottom: 2rem;
