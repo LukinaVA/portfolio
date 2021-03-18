@@ -45,6 +45,20 @@ html {
   }
 }
 
+body {
+  &.loaded-hiding {
+    .preloader {
+      opacity: 0;
+    }
+  }
+
+  &.loaded {
+    .preloader {
+      display: none;
+    }
+  }
+}
+
 input,
 button,
 textarea,

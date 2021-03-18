@@ -2,8 +2,9 @@ import React from 'react'
 import Container from '../Common/Container';
 import './Works.scss'
 import Card from "./Card/Card";
-import MoGo from './Card/Mogo.gif'
-import MNTN from './Card/MNTN.gif'
+import TodoApp from './Card/TodoApp.gif'
+import MoGo from './Card/Mogo.gif';
+import MNTN from './Card/MNTN.gif';
 
 export default function Works() {
     return (
@@ -12,6 +13,19 @@ export default function Works() {
                 <h2 className='works__title'>Latest Works</h2>
                 <h3 className='works__subtitle'>Click for more information</h3>
                 <div className='works__content'>
+                    <Card
+                        title='TodoApp'
+                        subtitle='application'
+                        code='https://github.com/LukinaVA/TodoApp'
+                        site='https://lukina.me/TodoApp'
+                        bgImg={TodoApp}
+                        description={[
+                            'React',
+                            'Typescript',
+                            'Redux [Redux-thunk]',
+                            'SCSS'
+                        ]}
+                    />
                     <Card
                         title='MoGo'
                         subtitle='landing page'

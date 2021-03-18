@@ -1,0 +1,59 @@
+@import '../../vars';
+
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: $lavender-lite;
+  z-index: 100;
+
+  transition: opacity .3s linear 0s;
+}
+
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 10rem;
+  height: 10rem;
+  margin-top: -5rem;
+  margin-left: -5rem;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  width: 5rem;
+  height: 5rem;
+  background: $white;
+  border-radius: 100%;
+  animation: preloader-bounce 2s infinite ease-in-out;
+
+  &:last-child {
+    top: auto;
+    bottom: 0;
+    animation-delay: -1s;
+  }
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
