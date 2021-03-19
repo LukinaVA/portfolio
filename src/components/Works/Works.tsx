@@ -11,7 +11,7 @@ export default function Works() {
         <div className='works'>
             <Container>
                 <h2 className='works__title'>Latest Works</h2>
-                <h3 className='works__subtitle'>Click for more information</h3>
+                <h3 className='works__subtitle'>&#9660; Click on the card for more information &#9660;</h3>
                 <div className='works__content'>
                     <Card
                         title='TodoApp'
