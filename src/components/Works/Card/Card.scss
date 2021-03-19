@@ -6,7 +6,7 @@
   width: 100%;
   overflow: hidden;
 
-  &:not(&:last-child) {
+  &:not(:last-child) {
     margin-bottom: 3rem;
   }
 
@@ -62,7 +62,7 @@
   font-size: 1.5rem;
 
   li {
-    &:not(&:last-child) {
+    &:not(:last-child) {
       margin-bottom: .5rem;
     }
   }
@@ -83,7 +83,7 @@
   padding: .7rem 2rem;
   border-radius: 1rem;
 
-  &:not(&:last-child) {
+  &:not(:last-child) {
     margin-right: 2rem;
   }
 

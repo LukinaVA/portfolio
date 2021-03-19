@@ -1,5 +1,4 @@
 import React from 'react'
-//import Container from '../Common/Container';
 
 import './Intro.scss'
 import '../Common/Btn/style.scss';
@@ -33,7 +32,6 @@ export default function Intro({openModal} : introProps) {
     }
 
     return <div className='intro' onMouseMove={parallax}>
-        {/*<Container>*/}
             <div className='intro__header header'>
                 <a href='#' className='header__link' onClick={(e) => scrollToWorks(e)}>Works</a>
                 <a href='#' className='header__link' onClick={(e) => openModal(e)}>Contacts</a>
@@ -81,7 +79,6 @@ export default function Intro({openModal} : introProps) {
                     </a>
                 </div>
             </div>
-        {/*</Container>*/}
     </div>;
 }
 

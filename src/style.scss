@@ -57,6 +57,10 @@ body {
       display: none;
     }
   }
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 }
 
 input,
@@ -75,6 +79,4 @@ a {
   color: inherit;
 }
 
-::-webkit-scrollbar {
-  width: 0;
-}
+
